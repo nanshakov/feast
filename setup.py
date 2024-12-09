@@ -154,7 +154,11 @@ MSSQL_REQUIRED = ["ibis-framework[mssql]>=9.0.0,<10"]
 FAISS_REQUIRED = ["faiss-cpu>=1.7.0,<2"]
 QDRANT_REQUIRED = ["qdrant-client>=1.12.0"]
 
+<<<<<<< HEAD
 GO_REQUIRED = ["cffi~=1.15.0"]
+=======
+MILVUS_REQUIRED = ["pymilvus"]
+>>>>>>> 321538df2 (feat: Adding support for Milvus as a Vector database)
 
 CI_REQUIRED = (
     [
@@ -226,6 +230,7 @@ CI_REQUIRED = (
     + OPENTELEMETRY
     + FAISS_REQUIRED
     + QDRANT_REQUIRED
+    + MILVUS_REQUIRED
 )
 
 DOCS_REQUIRED = CI_REQUIRED
@@ -355,6 +360,7 @@ setup(
         "faiss": FAISS_REQUIRED,
         "qdrant": QDRANT_REQUIRED,
         "go": GO_REQUIRED,
+        "milvus": MILVUS_REQUIRED,
     },
     include_package_data=True,
     license="Apache",
